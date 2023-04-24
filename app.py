@@ -2,6 +2,7 @@ from flask import Flask, render_template, request, jsonify
 from models import Flight
 from config import Config
 import requests
+import os
 app = Flask(__name__)
 app.config.from_object(Config)
 
@@ -48,3 +49,4 @@ def search_flights():
 if __name__ == '__main__':
 
     app.run()
+    app.run(port=os.getenv("PORT", default=5000), host='0.0.0.0')
