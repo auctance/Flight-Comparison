@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Welcome to our flight comparison website!</title>
+
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+<body>
+	<div class="container">
+		<h1>Flight Comparison Website</h1>
+		<form id="search-form">
+
+			<div class="form-group">
+			  <label for="departure">Departure:</label>
+			  <select id="departure" name="departure" required>
+				<option value="">Please select a province</option>
+			  </select>
+			</div>
+			<div class="form-group">
+			  <label for="destination">Destination:</label>
+			  <select id="destination" name="destination" required>
+				<option value="">Please select a province</option>
+			  </select>
+			</div>
+
+			<div class="form-group">
+				<label for="start-date">Start Date:</label>
+				<input type="date" id="start-date" name="start_date" required>
+			</div>
+			<div class="form-group">
+				<label for="end-date">End Date:</label>
+				<input type="date" id="end-date" name="end_date" required>
+			</div>
+			<button type="submit" id="search-btn">Search</button>
+		</form>
+
+
+
+		<div id="flight-list" >
+
+
+			  <div class="ticket-head">
+				<div class="ticket-price">价格</div>
+				<div class="ticket-departure">出发地</div>
+				<div class="ticket-destination">目的地</div>
+				<div class="ticket-date">日期</div>
+			  </div>
+
+
+
+		  <div id="results"></div>
+		</div>
+
+	</div>
+
+
+
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>

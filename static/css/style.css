@@ -1,0 +1,143 @@
+.container {
+	max-width: 800px;
+	margin: 0 auto;
+	padding: 20px;
+}
+
+#results {
+    width: auto;
+    height: auto;
+    margin-top: 20px;
+}
+
+h1 {
+    font-size: 40px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+label {
+    display: block;
+    font-size: 18px;
+    margin-right: 10px;
+    text-align: right;
+    width: 100px;
+}
+
+input[type="text"],
+input[type="date"] {
+    display: block;
+    font-size: 16px;
+    border: none;
+    border-bottom: 2px solid #ccc;
+}
+
+button[type="submit"] {
+    display: block;
+    margin: 20px auto 0;
+    margin-bottom: 50px;
+    padding: 10px 30px;
+    font-size: 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+
+
+#flight-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.ticket-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.ticket-head > div {
+  width: 25%;
+  text-align: center; /* 居中文本 */
+  box-sizing: border-box; /* 让 border 和 padding 不会超出 width 的范围 */
+  padding: 10px;
+  border: 1px solid black;
+}
+
+
+
+.ticket-wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.ticket {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  width: 100%; /* 让每个 ticket 占据一行的宽度 */
+}
+
+
+.ticket-date{
+  flex-grow: 0; /* 不占用多余的空间 */
+}
+
+.ticket-price,
+.ticket-destination,
+.ticket-departure {
+  flex-grow: 1; /* 在可用空间不足时按比例分配剩余空间 */
+  margin-right: 10px; /* 添加一些间距 */
+}
+
+
+
+
+
+.row {
+  width: 1000px;
+  margin-bottom: 20px;
+}
+
+.col {
+    flex: 1;
+    text-align: center;
+}
+
+.col:first-child {
+    text-align: left;
+}
+
+.col:last-child {
+    text-align: right;
+}
+
+@media screen and (max-width: 768px) {
+    .row {
+        width: 100%;
+        flex-wrap: wrap;
+    }
+
+    .col {
+        width: 100%;
+        text-align: left;
+        margin-bottom: 10px;
+    }
+
+    .col:first-child {
+        margin-bottom: 5px;
+    }
+}
